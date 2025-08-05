@@ -1,0 +1,48 @@
+ul {
+  display: flex;
+  flex-direction: row-reverse;
+  position: fixed;
+}
+
+
+
+/* .individual-plant {
+  width: 300px;          /* fixed width for each plant */
+  flex: 0 0 auto;        /* do not grow or shrink */
+  display: flex;
+  flex-direction: column;/* stack content inside vertically */
+  gap: 1rem;   */
+}
+
+/* .plant-list {
+  display: flex;
+  flex-direction: row;   /* horizontal alignment */
+  flex-wrap: nowrap;     /* no wrapping, all in one row */
+  gap: 1rem;
+  width: 100%;
+  overflow-x: auto;   /* Adds horizontal scroll if needed */
+} */
+
+/* main {
+  display: flex
+;
+    flex-direction: row-reverse;
+} */
+h5 {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: x-large;
+}
+
+.cart-list-column {
+ display: flex
+;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+ 
+  gap: 1rem; /* space between items */
+}
+
+div{
+     
+}

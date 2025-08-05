@@ -1,4 +1,4 @@
-const PLANTS = [
+  const PLANTS = [
   {
     id: 1,
     image: "🌿",
