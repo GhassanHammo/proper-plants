@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PlantContext } from "./PlantContext";
 
 export default function PlantItem({ plant, displayPlant }) {
   //console.log(plant);
+  const temp = useContext(PlantContext)
+  console.log(temp)
   return (
     <div className="individual-plant" key={plant.id}>
         <div>

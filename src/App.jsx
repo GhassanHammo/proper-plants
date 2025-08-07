@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./index.css";
 import data from "./data";
 import CartList from "./components/CartList";
 import PlantItem from "./components/PlantItem";
+import { PlantContext } from "./components/PlantContext";
 
 function App() {
+  // const [cart, setCart] = useState([]);
   // const [plant, setPlant] = useState({});
-  const [cart, setCart] = useState([]); // 1. Use array for cart
-  const [plant, setPlant] = useState([]);
+  const {cart, setCart } = useContext(PlantContext);
+  const {plant, setPlant } = useContext(PlantContext);
+  console.log(cart, plant)
   function updateCart(newItem) {
     const oldItem = cart.find((item, idx) => {
       return item.id === newItem.id;
@@ -33,7 +36,7 @@ function App() {
   //   console.log(element)
   //   setPlant(element);
   // };
-  //console.log(data);
+  // console.log(data);
   return (
     <>
       <div>
@@ -50,36 +53,6 @@ function App() {
           })}
         </div>
       </div>
-      {/* <div className="individual-plant" key={plant.id}>
-        <div>
-      <h1>{plant.name}</h1>
-      </div>
-      <div>
-        <h1>{plant.image}</h1>
-      </div>
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={() => displayPlant(plant)}
-      >
-        Add 
-      </button>
-    </div>
-    <div className="individual-plant" key={plant.id}>
-        <div>
-      <h1>{plant.name}</h1>
-      </div>
-      <div>
-        <h1>{plant.image}</h1>
-      </div>
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={() => displayPlant(plant)}
-      >
-        Remove
-      </button>
-    </div> */}
     </>
   );
 }

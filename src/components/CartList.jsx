@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function CartList({ plant, setCart }) {
-  console.log(plant);
+  //console.log(plant);
   function add(item) {
    setCart((prevCart) =>
       prevCart.map((cartItem) =>
